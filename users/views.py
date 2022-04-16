@@ -64,7 +64,7 @@ class SignInView(View):
 
             # 아이디와 비밀번호가 알맞게 입력된다면 DB 상 입력되어 있는 해당 유저의 ID를 jwt로 복호화 해 생성
             # 후에 프론트 사이드로 토큰과 status_code(200)를 반환해 로그인에 성공했음을 알림
-            access_token = jwt.encode({'user_id':user.id}, SECRET_KEY, algorithm = ALGORITHM)
+            access_token = jwt.encode({'id':user.id}, SECRET_KEY, algorithm = ALGORITHM)
             return JsonResponse({'MESSAGE':'SUCCESS', 'ACCESS_TOKEN': access_token}, status=200)
 
         # 입력값(아이디 혹은 비밀번호) 중 하나라도 빈 칸으로 들어오면 에러 반환
