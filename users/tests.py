@@ -268,7 +268,7 @@ class SignInTest(TransactionTestCase):
         response = client.post(
             '/users/signin', json.dumps(user), content_type = 'application/json'
         )
-        access_token = jwt.encode({'user_id':1}, SECRET_KEY, algorithm = ALGORITHM)
+        access_token = jwt.encode({'id':1}, SECRET_KEY, algorithm = ALGORITHM)
 
         self.assertEqual(
             response.json(),
