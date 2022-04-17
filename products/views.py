@@ -103,7 +103,7 @@ class ProductDetail(View):
     @login_decorator
     def delete(self,request,product_id):
         try:
-            product = Product.objects.get(id=product_id)
+            product = Product.objects.prefetch_related('supporter_set').get(id=product_id)
             user    = request.user
 
             if not product.user == user:
@@ -112,6 +112,11 @@ class ProductDetail(View):
             product.delete_at = datetime.now()
             product.is_delete = True
             product.save()
+
+            for supporter in product.supporter_set.all():
+                supporter.delete_at = datetime.now()
+                supporter.is_delete = True
+                supporter.save()
 
             return JsonResponse({'MESSAGE' : 'SUCCESS'}, status=204)
         
