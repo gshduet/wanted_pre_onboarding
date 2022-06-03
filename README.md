@@ -69,9 +69,14 @@
 ## 과제 진행 사항
 
 ### 사용 기술 스택
-
-`Python 3.9.7`, `Django 4.0.4`, `MySQL 8.0.28`
-`Git`, `Github`, `POSTMAN`
+<div> 
+ <img src="https://img.shields.io/badge/Python 3.9.7-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+ <img src="https://img.shields.io/badge/Django 4.0.4-092E20?style=for-the-badge&logo=Django&logoColor=white">
+ <img src="https://img.shields.io/badge/MySQL 8.0.28-4479A1?style=for-the-badge&logo=MySQL&logoColor=white">
+ <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white">
+ <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
+ <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white">
+</div>
 
 ### 모델링
 
